@@ -1,0 +1,216 @@
+https://code.visualstudio.com/
+https://nodejs.org/en/
+https://github.com/
+
+Basic JavaScript
+NPM
+Basic NodeJS(in built)(Os,file,http)
+NodeJS(full Stack App) (Node-EJS-Mongo-Express)
+Docker
+Third Party Api (Weather Api)
+//////////////////////
+Node-Es6(.babel)
+Github
+Redis  > 6379
+Email With Node(Sendgrid)
+MongoDb Basic
+Api with NodeJS(Rest)
+Testing
+Pm2
+DashBoard(Crud)
+Oauth(with github)
+OO_NodeJs
+Login/Logout(JWT)
+NodeJs with postgres
+Heroku
+GraphQl API
+ChatApp
+Production 
+
+Nginx
+
+Single Thread, non-blocking, Async I/O
+
+Event loop base structure
+All request will be takem at same thread and 
+keep processing parallel on the Event
+whenever request got complete we get the response
+and we call it as callback
+
+code - byte code -> machine language
+code => machine language  (node)
+engine v8(chrome)
+
+MERN/MEAN
+mongo express angular/react node
+
+///////////////////////////////
+NPM > Node Package Manager
+//////////////////////////
+node modules
+packages
+dependency
+
+
+/////////////////////////
+JSON> JavaScript Object Notation
+////////////////
+[
+    {
+        name:"John",
+        class:"Node"
+    },
+    {
+        name:"Alvin",
+        class:"UI"
+    }
+]
+
+////////////////////////
+Package.json
+/////////////////
+> starting point of application
+> Meta Data(name,version)
+> script 
+> dependency
+
+
+//////////////////////////
+Step to create package.json
+///////////////////
+**NodeJs must be installed in system
+
+> go to folder where you want to generate using cmd/terminal
+> npm init
+> Answer all questions
+> type "yes"
+
+
+//////////////////////////
+Step to install package
+///////////////////
+> go to folder where you want to install
+> npm i packagename
+
+local > local to the folder
+
+
+global> help in run start or stop the application
+
+#win
+> open cmd as admin
+> npm i -g nodemon
+
+#mac/linux
+> open terminal
+> sudo npm i -g nodemon
+
+/////
+in c drive
+make folder /data/db
+
+c:\Program file\mongodb\4.4\bin
+open 2 command prompt
+
+in first cmd(go to bin)  >> mongod(start mongodb server)
+in second cmd(go to bin) >> mongo(start mongodb console)
+
+default Port > 27017
+
+
+Rno | Hindi | English | Computer
+1   |  80   |         |
+2   |       |  80     |
+3   |  80   |         | 80
+
+JSON 
+[
+    {
+        rno:1,
+        hindi:80,
+        physic:89
+    },
+    {
+        rno:2,
+        english:80
+    },
+    {
+        rno:3,
+        hindi:80,
+        english:80
+    }
+]
+
+SQL           |     NoSQL
+Database           Database
+Table              Collection
+Row                Document
+Select             Find
+Insert             Insert
+
+
+////
+To See All Database
+> show dbs
+
+To Use db
+> use database name
+
+To See All Collection
+> show collections
+
+//To find records
+(select * from users)
+> db.users.find()
+
+> db.collectionsname.find()
+#only in console
+> db.collectionsname.find().pretty()
+
+(select * from restaurants where city="delhi")
+db.restaurants.find({city:'Chandigarh'}).pretty()
+
+(Select name,city from restaurants where city="delhi")
+db.restaurants.find({city:'Delhi'},{name:1,city:1,min_price:1,_id:0})
+
+
+db.restaurants.find({},{name:1,city:1,min_price:1,_id:0})
+
+db.restaurants.find({selection},{projection})
+
+
+///////
+Insert
+/////////
+///Create new database
+use dbname
+
+////create new collections
+> db.first.insert({name:'John',class:'Node'})
+
+> db.first.insert({_id:1,name:'Alvin',class:'UI'})
+> db.first.insert({_id:2,name:'Kev',class:'React'})
+
+
+after / is params        (compulsory)
+after ? is query params  (optional)
+
+
+function add(a,b){
+    return a+b
+}
+
+add(1,2)
+
+npm i express ejs request
+
+var a = 10
+var b = "my age is "+a 
+my age is 10
+
+var a = 10
+var b = `my age is ${a}`
+
+docker build . -t mynodesepapp
+docker -p 7899:8989 mynodesepapp
+docker image ls
