@@ -1,9 +1,9 @@
-import express from 'express';
-import request from 'request';
+var express = require('express');
+var request = require('request');
 const app = express();
 const port = 7899;
 
-const apiurl = "http://api.openweathermap.org/data/2.5/forecast/daily?q=London&mode=json&units=metric&cnt=5&appid=fbf712a5a83d7305c3cda4ca8fe7ef29";
+var apiurl = "http://api.openweathermap.org/data/2.5/forecast/daily?q=London&mode=json&units=metric&cnt=5&appid=fbf712a5a83d7305c3cda4ca8fe7ef29";
 
 app.use(express.static(__dirname+'/public'))
 app.set('views','./src/views')

@@ -8,16 +8,16 @@ Basic NodeJS(in built)(Os,file,http)
 NodeJS(full Stack App) (Node-EJS-Mongo-Express)
 Docker
 Third Party Api (Weather Api)
-//////////////////////
 Node-Es6(.babel)
 Github
 Redis  > 6379
+//////////////////////
 Email With Node(Sendgrid)
-MongoDb Basic
+MongoDb Basic >27017
 Api with NodeJS(Rest)
+DashBoard(Crud)
 Testing
 Pm2
-DashBoard(Crud)
 Oauth(with github)
 OO_NodeJs
 Login/Logout(JWT)
@@ -214,3 +214,25 @@ var b = `my age is ${a}`
 docker build . -t mynodesepapp
 docker -p 7899:8989 mynodesepapp
 docker image ls
+
+npm i @babel/core @babel/register @babel/preset-env
+
+/////Redis/////
+KEYS *
+set key value
+get key
+
+
+///////////////////Git/////////
+first time from any folder
+
+git init
+git add .
+git commit -m "first commit"
+git remote add origin https://github.com/Aakashdeveloper/nodetest.git
+git push -u origin master
+
+>>>>Next Time<<<<
+git add .
+git commit -m "first commit"
+git push

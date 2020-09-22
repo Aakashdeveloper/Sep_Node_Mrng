@@ -4,8 +4,8 @@
   "description": "this is third party api call",
   "main": "index.js",
   "scripts": {
-   "start":"node server.js",
-   "dev":"nodemon server.js"
+    "start": "node start.js",
+    "dev": "nodemon start.js"
   },
   "keywords": [
     "node"
@@ -13,6 +13,9 @@
   "author": "developerfunnel",
   "license": "ISC",
   "dependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/register": "^7.11.5",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
     "request": "^2.88.2"
