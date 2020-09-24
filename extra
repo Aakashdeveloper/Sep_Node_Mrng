@@ -218,6 +218,7 @@ docker image ls
 npm i @babel/core @babel/register @babel/preset-env
 
 /////Redis/////
+https://github.com/dmajkic/redis/downloads
 KEYS *
 set key value
 get key
@@ -236,3 +237,48 @@ git push -u origin master
 git add .
 git commit -m "first commit"
 git push
+
+
+db.students.insert({_id:1,name:'Alvin',city:'Delhi',sub:'science'})
+db.students.insert({_id:2,name:'John',city:'Delhi',sub:'Arts'})
+db.students.insert({_id:3,name:'Eva',city:'Amsterdam',sub:'science'})
+db.students.insert({_id:4,name:'Zoe',city:'London',sub:'Maths'})
+db.students.insert({_id:5,name:'Brian',city:'Amsterdam',sub:'science'})
+
+update
+upsert
+
+db.students.update(
+    {_id:1},
+    {
+        $set:{
+            sub:'Geography'
+        }
+    }
+)
+
+
+
+db.students.update(
+    {_id:6},
+    {
+        $set:{
+            name:'Herry',
+            sub:'History'
+        }
+    },
+    {upsert:true,
+    multi:true}
+)
+
+db.student.remove({})
+db.student.remove({_id:6})
+
+CRUD
+
+Create   => insert  => post
+READ     => find    => get
+update   => update  => put
+Delete   => remove  => delete
+
+npm i express ejs body-parser chai chai-http cors mongodb mocha
