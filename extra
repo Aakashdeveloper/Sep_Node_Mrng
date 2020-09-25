@@ -11,23 +11,26 @@ Third Party Api (Weather Api)
 Node-Es6(.babel)
 Github
 Redis  > 6379
-//////////////////////
-Email With Node(Sendgrid)
 MongoDb Basic >27017
 Api with NodeJS(Rest)
 DashBoard(Crud)
+//////////////////////
+Production 
 Testing
 Pm2
+Nginx
+Heroku
+
 Oauth(with github)
 OO_NodeJs
 Login/Logout(JWT)
 NodeJs with postgres
-Heroku
 GraphQl API
 ChatApp
-Production 
+Email With Node(Sendgrid)
 
-Nginx
+
+
 
 Single Thread, non-blocking, Async I/O
 
