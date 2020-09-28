@@ -14,16 +14,15 @@ Redis  > 6379
 MongoDb Basic >27017
 Api with NodeJS(Rest)
 DashBoard(Crud)
-//////////////////////
 Production 
+Heroku
+Oauth(with github)
+//////////////////////
+Login/Logout(JWT)
 Testing
 Pm2
 Nginx
-Heroku
-
-Oauth(with github)
 OO_NodeJs
-Login/Logout(JWT)
 NodeJs with postgres
 GraphQl API
 ChatApp
