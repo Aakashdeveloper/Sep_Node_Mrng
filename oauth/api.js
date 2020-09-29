@@ -3,6 +3,12 @@ const app = express();
 const superagent = require('superagent');
 const request = require('request');
 const port = 9800;
+const cors = require('cors');
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({extended:true}));
+app.use(bodyParser.json());
+
+app.use(cors())
 
 //static file path
 app.use(express.static(__dirname+'/public'))
@@ -15,20 +21,13 @@ app.get('/',(req,res) => {
     res.render('index');
 });
 
-app.get('/users',(req,res) => {
-    const code = req.query.code;
-    if(!code){
-        res.send({
-            success:false,
-            message:'Error on login'
-        })
-    }
+app.post('/oauth',(req,res) => {
     superagent
     .post('https://github.com/login/oauth/access_token')
     .send({
         client_id:'841775ffdee13afd7f4f',
         client_secret:'6af79224667933d50c3daaff3ac610f903305df6',
-        code:code
+        code:req.body.code
     })
     .set('Accept','application/json')
     .end((err,result) => {
@@ -46,6 +45,7 @@ app.get('/users',(req,res) => {
         var output;
         request(option,(err,response,body) => {
             output = body;
+            console.log(output)
             return res.send(output)
         })
     })
