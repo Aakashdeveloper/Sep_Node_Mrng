@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = process.env.PORT || 6700;
+const port = process.env.PORT || 9900;
 const mongo = require('mongodb');
 const MongoClient = mongo.MongoClient;
 const bodyParser = require('body-parser');
@@ -39,7 +39,7 @@ app.post('/addUser',(req,res) => {
         if(err){
             throw err
         }else{
-            res.send('Data Added')
+            res.status(200).send('Data Added')
         }
     })
 });

@@ -14,18 +14,18 @@ Redis  > 6379
 MongoDb Basic >27017
 Api with NodeJS(Rest)
 DashBoard(Crud)
+chatapp
 Production 
 Heroku
 Oauth(with github)
-//////////////////////
 Login/Logout(JWT)
 Testing
 Pm2
 Nginx
+//////////////////////
+GraphQl API
 OO_NodeJs
 NodeJs with postgres
-GraphQl API
-ChatApp
 Email With Node(Sendgrid)
 
 
@@ -303,3 +303,22 @@ npm i express ejs body-parser chai chai-http cors mongodb mocha
 (GET) => http://localhost:5000/api/auth/userinfo
 (Header) => {'x-access-token':'token value from login'}
 (response) => {userinfo}
+
+npm i -g pm2
+
+pm2 start api 
+
+server {
+        listen       8082;
+        server_name  localhost;
+        ssl_cert:'cert.pem',
+        ssl_key:'cert.key'
+        location / {
+	    proxy_pass http://127.0.0.1:8900;
+	    proxy_http_version 1.1;
+    	    proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection 'upgrade';
+            proxy_set_header Host $host;
+            proxy_cache_bypass $http_upgrade;
+        }
+    }
