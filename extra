@@ -10,6 +10,7 @@ Docker
 Third Party Api (Weather Api)
 Node-Es6(.babel)
 Github
+Email With Node(
 Redis  > 6379
 MongoDb Basic >27017
 Api with NodeJS(Rest)
@@ -22,11 +23,12 @@ Login/Logout(JWT)
 Testing
 Pm2
 Nginx
-//////////////////////
-GraphQl API
 OO_NodeJs
 NodeJs with postgres
-Email With Node(Sendgrid)
+GraphQl API
+
+
+
 
 
 
